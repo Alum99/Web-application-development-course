@@ -1,0 +1,57 @@
+/* Охватывает весь контент страницы, все элементы, если не переопределено, наследуют эти стили.*/
+body {
+    background-color: #f0f0f0;              /* светло-серый фон*/
+    font-family: 'Courier New', monospace;  /* шрифт текста */
+    color: #333333;                         /* основной цвет текста */
+}
+
+/* шапка страницы */
+.header {
+    background-color: #660066;      /* тёмно-фиолетовый фон шапки */
+    color: #ffffff;                 /* белый цвет текста в шапке */
+    text-align: center;             /* выравнивание текста по центру */
+    padding: 50px;                  /* внутренние отступы со всех сторон */
+}
+
+/* селектор выбирает элемент с классом title внутри .header */
+.header .title {
+    font-size: 3.5em;
+}
+
+/* Селектор выбирает <p class="subtitle"> внутри шапки. */
+.header .subtitle {
+    font-size: 1.8em;
+    font-style: italic;
+}
+
+/* блок оглавления <nav class="toc"> */
+.toc {
+    background-color: #ffebcc;
+    color: #660066;
+    padding: 25px;
+}
+
+.toc-image {
+    border: 3px solid #660066;
+}
+
+/* маркерованный список */
+.styled-list li {
+    color: #ff6600;
+}
+
+/* нумерованный список */
+.numbered-list li {
+    color: #006600;
+}
+
+/* селектор по id */
+#resources {
+    background-color: #ffffcc;
+    border: 2px dashed #660066;
+}
+
+/* комбинированный селекторы */
+.main-content h2, .toc h2 {
+    text-transform: uppercase;
+}
