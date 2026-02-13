@@ -1,0 +1,112 @@
+/* Базовые стили страницы */
+body {
+    background-color: #ffffff;      /* белый фон */
+    font-family: Arial, sans-serif; /* основной шрифт */
+    color: #111;                    /* основной цвет  */
+    margin: 0;                      /* убирает стандартные отступы  */
+    padding: 0;                     /* убирает внутренние отступы  */
+    letter-spacing: 0.2px;          /* увеличивает расстояние между буквами  */
+}
+
+/* Заголовки */
+h1, h2 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* сделать фон золотисто-охровым */
+.navbar {
+    background-color: #c59a6d;
+}
+
+/* Специальный класс Bootstrap */
+.display-4 {             /* Класс для большого заголовка */
+    letter-spacing: 4px;
+}
+
+/* Галерея моделей, используем Bootstrap cards */
+.card-img-top {
+    border-radius: 6px;
+}
+
+/* цвет текста для подписи картинок */
+.card-text {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Списки */
+.list-group-item {
+    color: #222;
+    font-weight: 500;
+}
+
+ol li {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* Таблицы */
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table a {
+    text-decoration: none;
+    color: #0d6efd;
+}
+
+.table a:hover {
+    text-decoration: underline;
+}
+
+/* Форма обратной связи */
+.form-label {
+    font-weight: 500;
+}
+
+.input-group .btn {
+    min-width: 120px;
+}
+
+/* Картинки с подписями (image-caption) */
+.image-container {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Footer */
+footer.fixed-bottom {
+    font-size: 14px;
+}
+
+/* Отступы для секций */
+section {
+    margin-bottom: 50px;
+}
+
+/* Мелкие визуальные исправления */
+.alert-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: 500;
+}

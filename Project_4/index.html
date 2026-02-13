@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="Umyarova Alisa" name="author">
+	<meta content="модельных бизнес, моделинг, fashion, модель, агенство, мода" name="keywords">
+	<meta content="Информация о модельном бизнесе, его видах, требованиях к моделям и карьерных перспективах" name="description">
+	<!-- специальный мета-тег для адаптивной разметки, позволяет правильно масштабировать экран -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Модельный бизнес</title>
+
+	<!-- подключение Bootstrap CSS к проекту через интернет-сервер-->
+	<!-- Bootstrap дает сетку, карточки, кнопки, таблицы, формы, navbar -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Bootstrap Icons, исп вместо, тк В Bootstrap 5 Glyphicons больше нет -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+	<!-- основной CSS -->
+	<link rel="stylesheet" href="style.css" title="Основной стиль">
+</head>
+
+
+<body>
+	<!-- Navbar - навигационное меню, Bootstrap-меню -->
+	<!-- создает меню, меню сворач на мал экранах, светлая тема, меню закреп при прокрутке -->
+	<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+		<!-- контейнер, центрирует, задает отступы -->
+		<div class="container">
+			<!-- название -->
+			<a class="navbar-brand fw-bold" href="#">Модельный бизнес</a>
+			<!-- кнопка для мобильной версии, открыть/закрыть меню -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- пункты меню -->
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<!-- список навигации, выравнивание вправо -->
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="#what_is">Что такое</a></li>
+					<li class="nav-item"><a class="nav-link" href="#directions">Направления</a></li>
+					<li class="nav-item"><a class="nav-link" href="#career_start">Как начать</a></li>
+					<li class="nav-item"><a class="nav-link" href="#skills">Навыки</a></li>
+					<li class="nav-item"><a class="nav-link" href="#international">Международные</a></li>
+					<li class="nav-item"><a class="nav-link" href="#photos">Фотосессии</a></li>
+					<li class="nav-item"><a class="nav-link" href="#resources">Ресурсы</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Обратная связь</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- Центрирование с помощью container, отступ сверху и снизу -->
+	<div class="container my-5">
+
+		<!-- Header, заголовок страницы -->
+		<header class="text-center mb-5">
+			<!-- крупный Bootstrap-заголовок -->
+			<h1 class="display-4 fw-bold">Модельный бизнес</h1>
+			<p class="lead" style="color: #c59a6d;" >Мир моды, подиумов и профессиональных фотосессий</p>
+		</header>
+
+		<!-- Первая галерея с картинками, row - строка сетки, g-4 — расст между колонками -->
+		<!-- Используется сетка с row и col-* для карточек моделей -->
+		<section class="row g-4 mb-5">
+			<!-- каждая колонка - это адаптивная сетка -->
+			<div class="col-sm-6 col-md-4">
+				<!-- Bootstrap-компонент карточки -->
+				<div class="card">
+					<!-- Картинка сверху карточки -->
+					<img src="pictures/model1.jpg" class="card-img-top" alt="Галина Миловская">
+					<!-- текст внутри карточки -->
+					<div class="card-body text-center">
+						<p class="card-text">Галина Миловская</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="card">
+					<img src="pictures/model2.jpg" class="card-img-top" alt="Регина Збарская">
+					<div class="card-body text-center">
+						<p class="card-text">Регина Збарская</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-4">
+				<div class="card">
+					<img src="pictures/model3.jpg" class="card-img-top" alt="Валентина Яшина">
+					<div class="card-body text-center">
+						<p class="card-text">Валентина Яшина</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Что такое модельный бизнес -->
+		<section id="what_is" class="mb-5">
+			<h2 class="mb-3">Что такое модельный бизнес?</h2>
+			<p>
+				Модельный бизнес — это отрасль индустрии моды и медиа, которая занимается поиском,
+                обучением, продвижением и управлением карьерой моделей. Он соединяет в себе элементы маркетинга,
+                рекламы, PR и искусства. Основная цель — создание и продвижение образа модели,
+                чтобы она была востребована для показов одежды, рекламных кампаний, фотосессий, видео и других медийных проектов.
+			</p>
+			<p>Основные участники модельного бизнеса:</p>
+			<!-- Bootstrap-стилизованный список -->
+			<ul class="list-group mb-3">
+				<li class="list-group-item">Модели — главные исполнители, которые демонстрируют одежду, участвуют в фотосессиях и видеопроектах;</li>
+				<li class="list-group-item">Агентства моделей — организации, которые ищут таланты, развивают их навыки, составляют портфолио и
+                    находят работу для моделей;</li>
+				<li class="list-group-item">Скауты (скаутеры) — специалисты, занимающиеся поиском новых лиц, оценкой потенциала и привлечением в агентство;</li>
+				<li class="list-group-item">Дизайнеры и бренды — клиенты, которые используют услуги моделей для продвижения своих коллекций и товаров;</li>
+				<li class="list-group-item">Фотографы, стилисты, визажисты — создают визуальный образ модели для съемок и показов.</li>
+			</ul>
+		</section>
+
+		<!-- Основные направления моделинга -->
+		<section id="directions" class="mb-5">
+			<h2 class="mb-3">Основные направления моделинга</h2>
+			<ul class="list-group mb-3">
+				<li class="list-group-item">Подиумный моделинг - участие в показах дизайнерской одежды на подиуме.
+                    Важны рост, пропорции и умение держаться перед публикой;</li>
+				<li class="list-group-item">Fashion-фотосессии - съемки для журналов, рекламных кампаний и портфолио.
+                    Основной акцент на стиле, образе и выразительности модели;</li>
+				<li class="list-group-item">Коммерческая реклама - реклама товаров и услуг: косметика, бытовая техника, еда, одежда.
+                    Модели должны быть универсальными и вызывать доверие у аудитории;</li>
+				<li class="list-group-item">Каталоговая съёмка - съемки для каталогов одежды, обуви и аксессуаров.
+                    Требуется аккуратная поза, демонстрация продукта и естественность;</li>
+				<li class="list-group-item">Plus-size моделинг - модели с нестандартными размерами.
+                    Популярен для рекламы одежды больших размеров и социальных кампаний о принятии тела.</li>
+			</ul>
+		</section>
+
+		<!-- Как начать карьеру модели -->
+		<section id="career_start" class="mb-5">
+			<h2 class="mb-3">Как начать карьеру модели?</h2>
+			<p>
+                Начало карьеры модели — это важный этап, который требует подготовки, терпения и стратегического подхода.
+                Успех в индустрии моды зависит не только от внешности, но и от профессиональных навыков,
+                уверенности и умения представлять себя.
+            </p>
+			<ol class="mb-3">
+				<li><strong>Самооценка и подготовка</strong>
+					<p>Прежде чем обращаться в агентство, важно честно оценить свои параметры, рост, пропорции и фотогеничность.
+                    Нужно понять, какое направление моделинга вам ближе: подиумный, fashion-фотосессии, коммерческий или plus-size моделинг.
+                    Важно развивать уверенность в себе, умение позировать, дефиле и выражать эмоции.</p>
+				</li>
+				<li><strong>Создание портфолио</strong>
+					<p>Портфолио — это «визитная карточка» модели.
+                    Оно должно включать качественные фотографии в разных образах: портрет, полный рост, профиль, casual и вечерний стиль.</p>
+				</li>
+				<li><strong>Сотрудничество с модельными агентствами</strong>
+					<p>Модельные агентства помогают новичкам находить работу, развивать навыки и формировать карьеру.
+                    Обычно требуется отправить портфолио и пройти кастинг (личное собеседование и съемку).
+                    Агентство оценивает потенциал модели, ее внешность, умение держаться перед камерой и подиумом.</p>
+				</li>
+				<li><strong>Участие в кастингах и пробах</strong>
+					<p>Кастинги — это конкурсы или просмотры для конкретных проектов: показ мод, фотосессия или реклама.
+                    На кастингах важно быть пунктуальным, хорошо подготовленным и уметь показать свои сильные стороны.
+                    Даже отказ — это опыт и возможность улучшить навыки.</p>
+				</li>
+				<li><strong>Развитие навыков и обучение</strong>
+					<p>Новички проходят тренинги по позированию, дефиле, актерскому мастерству и визажу.
+                    Полезно изучать фотопозирование, мимику, умение работать с разным светом и ракурсами.</p>
+				</li>
+				<li><strong>Личный бренд и онлайн-присутствие</strong>
+					<p>Социальные сети стали важным инструментом для моделей.
+                    Публикация качественных фотографий, участие в коллаборациях и ведение портфолио онлайн
+                    помогает привлечь внимание агентств и брендов.
+                    Важно поддерживать имидж профессионала и следить за репутацией.</p>
+				</li>
+			</ol>
+		</section>
+
+		<!-- Вторая галерея -->
+		<section class="row g-4 mb-5">
+			<div class="col-sm-6 col-md-4">
+				<div class="card">
+					<img src="pictures/model21.jpg" class="card-img-top" alt="Irina Shayk">
+					<div class="card-body text-center">
+						<p class="card-text">Irina Shayk</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="card">
+					<img src="pictures/model22.jpg" class="card-img-top" alt="Barbara Palvin">
+					<div class="card-body text-center">
+						<p class="card-text">Barbara Palvin</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="card">
+					<img src="pictures/model33.jpg" class="card-img-top" alt="Gigi Hadid">
+					<div class="card-body text-center">
+						<p class="card-text">Gigi Hadid</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Навыки модели -->
+		<section id="skills" class="mb-5">
+			<h2 class="mb-3">Какие навыками должна обладать модель?</h2>
+			<ol class="mb-3">
+				<li><strong>Фото- и видеопозирование</strong>
+					<p>Умение правильно позировать перед камерой для фотосессий и видеопроектов.
+                    Владение разными ракурсами, выражением лица и мимикой.</p>
+				</li>
+				<li><strong>Дефиле</strong>
+					<p>Уверенная и красивая походка для подиума. Умение держать осанку, двигаться в ритме музыки.</p>
+				</li>
+				<li><strong>Знание английского языка</strong>
+					<p>В международной индустрии модельного бизнеса знание английского необходимо для общения с агентствами, брендами и клиентами.
+                    Позволяет работать за границей и участвовать в глобальных проектах.</p>
+				</li>
+				<li><strong>Коммуникация и профессионализм</strong>
+					<p>Умение общаться с фотографами, стилистами, агентами и коллегами.
+                    Пунктуальность, ответственность и соблюдение договоренностей.</p>
+				</li>
+				<li><strong>Умение адаптироваться</strong>
+					<p>Быстро принимать новые образы, работать в разных стилях и условиях.
+                    Гибкость в графике и способность справляться со стрессом на съемках.</p>
+				</li>
+			</ol>
+		</section>
+
+		<!-- Международные возможности -->
+		<section id="international" class="mb-5">
+			<h2 class="mb-3">Международные возможности</h2>
+			<p>
+				Моделинг открывает широкие возможности для работы за границей.
+                Модели могут строить карьеру в таких странах, как Китай, Япония, Индия, Индонезия, Филиппины, Вьетнам
+                и других государствах с активно развивающейся индустрией моды.
+                Международные контракты позволяют получить ценный профессиональный опыт,
+                познакомиться с новыми культурами и значительно расширить перспективы карьерного роста.
+			</p>
+		</section>
+
+		<!-- Фотосессии -->
+		<section id="photos" class="mb-5">
+			<h2 class="mb-3">Роль фотосессий в моделинге</h2>
+			<p>Фотосессии — это один из главных инструментов продвижения модели.
+                Они помогают создать профессиональный образ и показать разнообразие навыков и внешности.
+                Портфолио — это «визитная карточка» модели для агентств и клиентов.
+                Качественные фотографии показывают внешность, умение позировать и способность создавать разные образы.</p>
+			<p>На съемках модель учится работать с камерой, светом, ракурсами и эмоциями.
+                Фотосессии используются для продвижения в социальных сетях, на сайтах агентств и в профессиональных каталогах.
+                Разные виды (fashion, коммерческие, рекламные, тематические) демонстрируют универсальность модели.
+                Это позволяет работать в нескольких направлениях моделинга и расширяет возможности для карьеры.</p>
+		</section>
+
+		<!-- Ресурсы -->
+		<section id="resources" class="mb-5">
+			<h2 class="mb-3">Полезные ресурсы о моделинге</h2>
+			<!-- Таблица Bootstrap: базовая таблица, полоски, подсветка строки при наведении -->
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>Название</th>
+						<th>Ссылка</th>
+						<th>Описание</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Sigma Inc</td>
+						<td><a href="https://sigmaincorp.ru" target="_blank">Перейти</a></td>
+						<td>Школа моделей и агентство</td>
+					</tr>
+					<tr>
+						<td>FocusModa</td>
+						<td><a href="https://focusmoda.ru/fashion/style/kak-ustroen-modelnyy-biznes-v-rossii-" target="_blank">Перейти</a></td>
+						<td>Как устроен модельный бизнес в России</td>
+					</tr>
+					<tr>
+						<td>Top Secret</td>
+						<td><a href="https://topsecretmodel.ru" target="_blank">Перейти</a></td>
+						<td>Агентство с обучением моделей</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!-- Форма обратной связи -->
+		<section id="contact" class="mb-5">
+			<h2 class="mb-3">Обратная связь</h2>
+			<!-- Форма без JS -->
+			<form>
+				<!-- Имя и фамилия -->
+				<div class="mb-3">
+					<label for="name" class="form-label">Имя и фамилия</label>
+					<input type="text" class="form-control" id="name" placeholder="Введите ваше имя и фамилию">
+				</div>
+
+				<!-- email -->
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" placeholder="Введите email">
+				</div>
+
+				<!-- Сообщение -->
+				<div class="mb-3">
+					<label for="message" class="form-label">Сообщение</label>
+					<textarea class="form-control" id="message" rows="4" placeholder="Ваше сообщение"></textarea>
+				</div>
+
+				<!-- Сгруппированные формы ввода (input group) -->
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="Введите тему">
+
+					<!-- Кнопка, использование иконки в кнопке -->
+					<button class="btn btn-primary" type="button">
+						<i class="bi bi-send-fill"></i> Отправить
+					</button>
+				</div>
+			</form>
+
+			<!-- Пример группы кнопок -->
+			<div class="btn-group mt-3" role="group" aria-label="Пример группы кнопок">
+				<button type="button" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Назад</button>
+				<button type="button" class="btn btn-secondary"><i class="bi bi-arrow-right"></i> Вперед</button>
+				<button type="button" class="btn btn-secondary"><i class="bi bi-house"></i> Главная</button>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<!-- темный фон, белый текст, центрирование, внутренний отступ, закреплен внизу экрана -->
+	<footer class="bg-dark text-white text-center py-3 fixed-bottom">
+		© 2026 Модельный бизнес | Мир моды и стиля
+	</footer>
+
+	<!-- подключение Bootstrap JS для раскрытия меню, работы кнопки toggler, интерактивных элементов -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
