@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="Umyarova Alisa" name="author">
+    <!-- Meta тег для адаптивности -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь | Модельный бизнес</title>
+
+    <!-- Подключает Bootstrap через CDN (готовые стили и сетку для адаптивности) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons — набор векторных иконок, которые можно вставлять в HTML через классы <i class="bi bi-send-fill"></i-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Основной CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar — класс Bootstrap для меню, меню разворач на боль экранах, на мал свор в гамбургер, -->
+    <!-- светлая цветовая тема текста, закрепляет меню вверху страницы при прокрутке -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <!-- container — Bootstrap-класс для центрации и отступов слева и справа -->
+        <div class="container">
+            <!-- Ссылка с названием сайта -->
+            <a class="navbar-brand fw-bold" href="index.html">Модельный бизнес</a>
+            <!-- Кнопка «гамбургер» для мобильных экранов -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Меню, которое скрывается на малых экранах (collapse) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Обратная связь</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Контейнер формы -->
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Связаться с нами</h1>
+        <p class="text-center mb-5 text-muted">Заполните форму, и мы обязательно свяжемся с вами в ближайшее время.</p>
+
+        <!-- Форма обратной связи -->
+        <!-- <form> — блок для ввода данных пользователем. -->
+        <form class="mx-auto" style="max-width: 600px;">
+
+            <!-- Имя и фамилия-->
+            <div class="mb-3">
+                <!-- <label> — подпись для поля ввода, for="name" — связывает подпись с полем ввода id="name" -->
+                <label for="name" class="form-label">Имя и фамилия</label>
+                <!-- placeholder — текст-подсказка внутри поля -->
+                <input type="text" class="form-control" id="name" placeholder="Введите ваше имя и фамилию">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Введите email">
+            </div>
+
+            <!-- Тема -->
+            <div class="mb-3">
+                <label for="subject" class="form-label">Тема сообщения</label>
+                <input type="text" class="form-control" id="subject" placeholder="Введите тему сообщения">
+            </div>
+
+            <!-- Сообщение -->
+            <div class="mb-3">
+                <label for="message" class="form-label">Сообщение</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Ваше сообщение"></textarea>
+            </div>
+
+            <!-- Кнопка отправки, d-grid делает кнопку на всю ширину формы, btn — базовый стиль кнопки Bootstrap -->
+            <!-- <i class="bi bi-send-fill"></i> — иконка конверта из Bootstrap Icons -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-send-fill"></i> Отправить
+                </button>
+            </div>
+        </form>
+
+        <!-- Контактная информация (смысловая нагрузка) -->
+        <div class="mt-5 text-center text-muted">
+            <p>Вы также можете связаться с нами по телефону: <strong>+7 (999) 999-99-99</strong></p>
+            <p>Email: <strong>info@modelbusiness.ru</strong></p>
+        </div>
+    </div>
+
+    <!-- Footer (подвал сайта)-->
+    <footer class="bg-dark text-white text-center py-3">
+        © 2026 Модельный бизнес | Мир моды и стиля
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

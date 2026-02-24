@@ -6,15 +6,17 @@
 	<meta content="Umyarova Alisa" name="author">
 	<meta content="модельных бизнес, моделинг, fashion, модель, агенство, мода" name="keywords">
 	<meta content="Информация о модельном бизнесе, его видах, требованиях к моделям и карьерных перспективах" name="description">
-	<!-- специальный мета-тег для адаптивной разметки, позволяет правильно масштабировать экран -->
+
+	<!-- 2. специальный мета-тег для адаптивной разметки, позволяет правильно масштабировать экран -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Модельный бизнес</title>
 
 	<!-- подключение Bootstrap CSS к проекту через интернет-сервер-->
-	<!-- Bootstrap дает сетку, карточки, кнопки, таблицы, формы, navbar -->
+	<!-- 1. Bootstrap дает сетку, карточки, кнопки, таблицы, формы, navbar -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Bootstrap Icons, исп вместо, тк В Bootstrap 5 Glyphicons больше нет -->
+	<!-- 3.b) Bootstrap Icons, исп вместо, тк В Bootstrap 5 Glyphicons больше нет -->
+	<!-- Набор отдельных иконок в виде шрифта, котор подкл через CDN - сервера, которые хранят популярные файлы-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 	<!-- основной CSS -->
@@ -23,10 +25,10 @@
 
 
 <body>
-	<!-- Navbar - навигационное меню, Bootstrap-меню -->
+	<!-- 3.a) Navbar - навигационное меню, Bootstrap-меню -->
 	<!-- создает меню, меню сворач на мал экранах, светлая тема, меню закреп при прокрутке -->
 	<nav class="navbar navbar-expand-lg navbar-light sticky-top">
-		<!-- контейнер, центрирует, задает отступы -->
+		<!-- 2. центрирование через контейнер-->
 		<div class="container">
 			<!-- название -->
 			<a class="navbar-brand fw-bold" href="#">Модельный бизнес</a>
@@ -46,16 +48,14 @@
 					<li class="nav-item"><a class="nav-link" href="#international">Международные</a></li>
 					<li class="nav-item"><a class="nav-link" href="#photos">Фотосессии</a></li>
 					<li class="nav-item"><a class="nav-link" href="#resources">Ресурсы</a></li>
-					<li class="nav-item"><a class="nav-link" href="#contact">Обратная связь</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Обратная связь</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-
 	<!-- Центрирование с помощью container, отступ сверху и снизу -->
 	<div class="container my-5">
-
 		<!-- Header, заголовок страницы -->
 		<header class="text-center mb-5">
 			<!-- крупный Bootstrap-заголовок -->
@@ -66,7 +66,7 @@
 		<!-- Первая галерея с картинками, row - строка сетки, g-4 — расст между колонками -->
 		<!-- Используется сетка с row и col-* для карточек моделей -->
 		<section class="row g-4 mb-5">
-			<!-- каждая колонка - это адаптивная сетка -->
+			<!-- каждая колонка - это адаптивная сетка / 2. разные размеры колонок-->
 			<div class="col-sm-6 col-md-4">
 				<!-- Bootstrap-компонент карточки -->
 				<div class="card">
@@ -259,7 +259,7 @@
 		<!-- Ресурсы -->
 		<section id="resources" class="mb-5">
 			<h2 class="mb-3">Полезные ресурсы о моделинге</h2>
-			<!-- Таблица Bootstrap: базовая таблица, полоски, подсветка строки при наведении -->
+			<!-- 4. Таблица Bootstrap: базовая таблица, полоски, подсветка строки при наведении, Использованы классы .table-* -->
 			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
@@ -288,48 +288,6 @@
 			</table>
 		</section>
 
-		<!-- Форма обратной связи -->
-		<section id="contact" class="mb-5">
-			<h2 class="mb-3">Обратная связь</h2>
-			<!-- Форма без JS -->
-			<form>
-				<!-- Имя и фамилия -->
-				<div class="mb-3">
-					<label for="name" class="form-label">Имя и фамилия</label>
-					<input type="text" class="form-control" id="name" placeholder="Введите ваше имя и фамилию">
-				</div>
-
-				<!-- email -->
-				<div class="mb-3">
-					<label for="email" class="form-label">Email</label>
-					<input type="email" class="form-control" id="email" placeholder="Введите email">
-				</div>
-
-				<!-- Сообщение -->
-				<div class="mb-3">
-					<label for="message" class="form-label">Сообщение</label>
-					<textarea class="form-control" id="message" rows="4" placeholder="Ваше сообщение"></textarea>
-				</div>
-
-				<!-- Сгруппированные формы ввода (input group) -->
-				<div class="input-group mb-3">
-					<input type="text" class="form-control" placeholder="Введите тему">
-
-					<!-- Кнопка, использование иконки в кнопке -->
-					<button class="btn btn-primary" type="button">
-						<i class="bi bi-send-fill"></i> Отправить
-					</button>
-				</div>
-			</form>
-
-			<!-- Пример группы кнопок -->
-			<div class="btn-group mt-3" role="group" aria-label="Пример группы кнопок">
-				<button type="button" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Назад</button>
-				<button type="button" class="btn btn-secondary"><i class="bi bi-arrow-right"></i> Вперед</button>
-				<button type="button" class="btn btn-secondary"><i class="bi bi-house"></i> Главная</button>
-			</div>
-		</section>
-
 	</div>
 
 	<!-- Footer -->
@@ -338,7 +296,7 @@
 		© 2026 Модельный бизнес | Мир моды и стиля
 	</footer>
 
-	<!-- подключение Bootstrap JS для раскрытия меню, работы кнопки toggler, интерактивных элементов -->
+	<!-- 1. подключение Bootstrap JS для раскрытия меню, работы кнопки toggler, интерактивных элементов -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
