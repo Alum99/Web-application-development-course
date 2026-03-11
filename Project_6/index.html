@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="Umyarova Alisa" name="author">
+    <title>Практическая работа №6</title>
+	<!-- CSS-стиль внутри страницы -->
+	<style>
+
+		body {
+			text-align: center;
+			font-size: 20px;
+			background-color: #f5f5f5;
+		}
+
+		input {
+			width: 300px;
+			height: 35px;
+			font-size: 18px;
+		}
+
+		button {
+			font-size: 18px;
+			padding: 10px 20px;
+			background-color: #4da6ff;
+			color: white;
+    		border: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Обработка последовательности чисел</h1>
+	<p>
+		<strong>Программа выполняет:</strong>
+		<br>1. Находит минимальный элемент
+		<br>2. Определяет сколько раз встречается минимальный элемент
+		<br>3. Определяет количество ненулевых элементов
+	</p>
+
+	<p>Введите последовательность чисел через пробел:</p>
+	<!-- Пользователь вводит последовательность чисел -->
+	<!-- id="numbers" — уникальный идентификатор, чтобы JS мог обратиться и считать введённые данные -->
+	<input type="text" id="numbers">
+
+	<!-- Два переноса строки -->
+	<br><br>
+
+	<!-- Кнопка, onclick="calculate()" — событие клика, вызыв ф-ия calculate() из файла script.js -->
+	<button onclick="calculate()">Вычислить</button>
+
+	<!-- Пустой абзац, в кот JS будет отобр результат работы -->
+	<!-- id="result" нужно чтобы скрипт нашел и вставил текст с результатом -->
+	<h2>Результат:</h2>
+	<p id="result"></p>
+
+	<!-- Подключение внешнего JavaScript-файла script.js-->
+	<script src="script.js"></script>
+</body>
+
+</html>
