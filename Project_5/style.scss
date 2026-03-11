@@ -1,0 +1,152 @@
+/* исходный файл стилей, который потом компилируется в обычный CSS */
+
+/* Переменные */
+/* начинаются со знака $ и позволяют хранить значения, которые можно использовать в разных местах файла */
+
+$main-font: Arial, sans-serif;
+$main-text: #111;
+$body-bg: #ffffff;         /* хранит цвет фона страницы */
+
+$gold-color: #c59a6d;      /* хранит цвет навигационного меню */
+$light-gray: #999;         /* хранит цвет дополнительного текста */
+$dark-gray: #222;          /* цвет текста списков */
+
+$link-color: #0d6efd;      /* цвет ссылок */
+
+$footer-text-size: 14px;   /* размер текста футера */
+
+/* Миксин */
+/* Миксин — это повторно используемый блок кода, он работает как функция для CSS */
+
+@mixin rounded-image {
+  border-radius: 6px;
+}
+
+/* Базовые стили страницы */
+body {
+  background-color: $body-bg;
+  font-family: $main-font;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.2px;
+}
+
+/* Заголовки */
+h1, h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar {                           /* .navbar — класс Bootstrap для навигационной панели */
+  background-color: $gold-color;    /* используется переменная */
+}
+
+/* Bootstrap Display, для больших заголовков */
+.display-4 {
+  letter-spacing: 4px;
+}
+
+/* Карточки моделей */
+.card-img-top {
+  @include rounded-image;           /* @include вставляет код миксина, закругленные уголки */
+}
+
+/* Текст карточек, исп переменная */
+.card-text {
+  font-size: 14px;
+  color: $light-gray;
+}
+
+/* Списки */
+.list-group-item {              /* .list-group-item — элемент списка Bootstrap */
+  color: $dark-gray;
+  font-weight: 500;
+}
+
+/* Вложенность SCSS, вложенные селекторы SCSS */
+ol {
+  li {
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+}
+
+/* Таблицы */
+.table {            /* Это означает: .table th .table td */
+
+  th,
+  td {
+    vertical-align: middle;
+  }
+
+  a {               /* Ссылки внутри таблицы */
+    text-decoration: none;
+    color: $link-color;
+
+    &:hover {       /* Псевдокласс hover, & означает текущий селектор */
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Форма обратной связи */
+.form-label {
+  font-weight: 500;
+}
+
+.input-group {       /* Вложенность */
+
+  .btn {
+    min-width: 120px;
+  }
+
+}
+
+/* Картинки с подписями */
+.image-container {          /* Контейнер используется для позиционирования подписи */
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+
+  img {                     /* Картинка */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    @include rounded-image;
+  }
+}
+
+/* Подпись размещается поверх изображения */
+.image-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Footer */
+footer {
+
+  &.fixed-bottom {                  /* Символ & означает: footer.fixed-bottom */
+    font-size: $footer-text-size;
+  }
+
+}
+
+/* Отступы для секций */
+section {
+  margin-bottom: 50px;
+}
+
+/* Мелкие визуальные исправления, это небольшая настройка Bootstrap alert блока */
+.alert-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 500;
+}

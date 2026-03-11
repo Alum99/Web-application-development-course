@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* исходный файл стилей, который потом компилируется в обычный CSS */
+/* Переменные */
+/* начинаются со знака $ и позволяют хранить значения, которые можно использовать в разных местах файла */
+/* хранит цвет фона страницы */
+/* хранит цвет навигационного меню */
+/* хранит цвет дополнительного текста */
+/* цвет текста списков */
+/* цвет ссылок */
+/* размер текста футера */
+/* Миксин */
+/* Миксин — это повторно используемый блок кода, он работает как функция для CSS */
+/* Базовые стили страницы */
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.2px;
+}
+
+/* Заголовки */
+h1, h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar { /* .navbar — класс Bootstrap для навигационной панели */
+  background-color: #c59a6d; /* используется переменная */
+}
+
+/* Bootstrap Display, для больших заголовков */
+.display-4 {
+  letter-spacing: 4px;
+}
+
+/* Карточки моделей */
+.card-img-top {
+  border-radius: 6px;
+  /* @include вставляет код миксина, закругленные уголки */
+}
+
+/* Текст карточек, исп переменная */
+.card-text {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Списки */
+.list-group-item { /* .list-group-item — элемент списка Bootstrap */
+  color: #222;
+  font-weight: 500;
+}
+
+/* Вложенность SCSS, вложенные селекторы SCSS */
+ol li {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+/* Таблицы */
+.table { /* Это означает: .table th .table td */ }
+.table th,
+.table td {
+  vertical-align: middle;
+}
+.table a { /* Ссылки внутри таблицы */
+  text-decoration: none;
+  color: #0d6efd;
+}
+.table a:hover { /* Псевдокласс hover, & означает текущий селектор */
+  text-decoration: underline;
+}
+
+/* Форма обратной связи */
+.form-label {
+  font-weight: 500;
+}
+
+.input-group { /* Вложенность */ }
+.input-group .btn {
+  min-width: 120px;
+}
+
+/* Картинки с подписями */
+.image-container { /* Контейнер используется для позиционирования подписи */
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.image-container img { /* Картинка */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Подпись размещается поверх изображения */
+.image-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Footer */
+footer.fixed-bottom { /* Символ & означает: footer.fixed-bottom */
+  font-size: 14px;
+}
+
+/* Отступы для секций */
+section {
+  margin-bottom: 50px;
+}
+
+/* Мелкие визуальные исправления, это небольшая настройка Bootstrap alert блока */
+.alert-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */
